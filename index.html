@@ -54,6 +54,8 @@ header .sp { flex: 1; }
   #bar { justify-content: flex-start; padding: 4px 8px; } #bar button { padding: 6px 10px; font-size: 14px; }
   #cap { padding: 4px 8px; }
 }
+/* スマートフォンの縦画面：召魂の儀の画面を上に詰め、台詞と操作をすぐ下に */
+@media (orientation: portrait) { #stage { flex: 0 0 auto; height: min(75vw, 60dvh); } #side { flex: 1 1 auto; justify-content: flex-start; } }
 /* 埋め込み・開発用の要素は試遊版では使わない */
 #autoBox, #bHold, #bResume, #bExit, #decideMsg, #bStop, #proposeMsg, #bAccept, #bDecline, #stopBanner, #nextPanel, #holdBar { display: none !important; }
 /* 名簿 */
