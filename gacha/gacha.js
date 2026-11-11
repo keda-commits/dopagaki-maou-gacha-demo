@@ -242,7 +242,7 @@ let fuseList = [];
 
 function addFx(mod, o, layer = 'front') { const f = createFx(mod, o); fxs.push({ f, layer }); return f; }
 function burstPx(x, y, n, cols, sp = 60, life = .7, g = 60) { for (let i = 0; i < n; i++) { const a = rand(0, 6.28), v = rand(sp * .3, sp); parts.push({ x, y, vx: Math.cos(a) * v, vy: Math.sin(a) * v - sp * .3, life, age: 0, col: pick(cols), g }); } }
-function say(who, text, face, life) { const plain = text.replace(/\[\/?\w\]/g, ''); if (DEMO) { const el = document.getElementById('line'); if (el) el.innerHTML = `<b>${who === 'verm' ? 'ヴァルメリア' : '魔王ドパル'}</b>${plain.replace(/[<>&]/g, '')}`; } bubble = { who, text, plain, len: plain.length, shown: 0, t: 0, life: (life || 2.6 + text.length * .06) + plain.length / 30 * .5 }; if (face && who === 'maou') M.face = face; }
+function say(who, text, face, life) { const plain = text.replace(/\[\/?\w\]/g, ''); if (DEMO) { const el = document.getElementById('line'); if (el) el.innerHTML = `<b>${who === 'verm' ? 'ヴァルメリア' : '魔王'}</b>${plain.replace(/[<>&]/g, '')}`; } bubble = { who, text, plain, len: plain.length, shown: 0, t: 0, life: (life || 2.6 + text.length * .06) + plain.length / 30 * .5 }; if (face && who === 'maou') M.face = face; }
 
 /* ---------------- 待機（速度・スキップ対応） ---------------- */
 const waits = [], timers = [];
